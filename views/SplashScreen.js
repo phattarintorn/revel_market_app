@@ -42,9 +42,9 @@ export class SplashScreen extends React.Component {
 		return (
 			<View style={styles.container}>
 				<StatusBar hidden={true} />
-				<Image resizeMode="contain" source={require('../images/logo.png')} style={{ width: 180, height: 180, marginBottom: 50 }} />
-				<ActivityIndicator style={{ marginBottom: 8, }} size="large" color="#442119"/>
-                <Text style={{ paddingLeft: 8, color: '#fff' }}>โหลดข้อมูล...</Text>
+				<Image resizeMode="contain" source={require('../images/wayv.png')} style={{ width: 180, height: 180, marginBottom: 50 }} />
+				<ActivityIndicator style={{ marginBottom: 8, }} size="large" color="#763526"/>
+                <Text style={{ paddingLeft: 8, color: '#000' }}>โหลดข้อมูล...</Text>
 			</View>
 		);
 	}

@@ -35,10 +35,11 @@ export class Login extends React.Component {
     componentDidMount() {
         AsyncStorage.getItem('user_data').then((user) => { return JSON.parse(user) }).then((user_data) => {
             if (user_data != null) {
-                this.setState({ 
-                    username: user_data.user_username, 
-                    password: user_data.user_password 
-                });
+                // this.setState({ 
+                //     username: user_data.user_username, 
+                //     password: user_data.user_password 
+                // });
+                this.props.navigation.navigate('Home')
             }
         });
     }
@@ -78,13 +79,13 @@ export class Login extends React.Component {
         var display = [];
         if (this.state.loading) {
             display.push(
-                <View style={{ flexDirection: "row", justifyContent: "center", flex: 1, backgroundColor: '#25aae1', borderRadius: 2, padding: 10, }}>
+                <View style={{ flexDirection: "row", justifyContent: "center", flex: 1, backgroundColor: '#763526', borderRadius: 2, padding: 10, }}>
                     <ActivityIndicator size="small" color="#fff"/>
                 </View>
             )
         }else{
             display.push(
-                <TouchableOpacity style={{ flex: 1, backgroundColor: '#25aae1', borderRadius: 2, padding: 10, }} onPress={() => this._getLogin()}>
+                <TouchableOpacity style={{ flex: 1, backgroundColor: '#763526', borderRadius: 2, padding: 10, }} onPress={() => this._getLogin()}>
                     <Text style={[ styles.text_font, { alignSelf: "center", }]}>LOGIN</Text>
                 </TouchableOpacity>
             )
@@ -97,19 +98,19 @@ export class Login extends React.Component {
         }
 
         return (
-            <ScrollView style={{ backgroundColor: "#010001", }}>
+            <ScrollView style={{ backgroundColor: "#E4CDC8", }}>
                 <StatusBar hidden={true} />
                 <View style={{ padding: 36, }}>
                     <Image 
                         resizeMode="contain"
-                        source={require('../../images/logo.png')} 
+                        source={require('../../images/wayv.png')} 
                         style={{ width: 200, height: 200, marginTop: 54, marginBottom: 24, alignSelf: 'center', }}
                     >
                     </Image>
                     <View style={[ styles.row_underline, { marginBottom: 16, }]}>
                         <Icon name="email-outline" style={styles.login_icon} />
                         <TextInput placeholder="Email address"
-                            placeholderTextColor="#ADADAD"
+                            placeholderTextColor="#DA9484"
                             editable={!this.state.loading}
                             underlineColorAndroid='transparent' 
                             style={[ styles.text_font, { flex: 1, paddingLeft: 12, } ]}
@@ -120,7 +121,7 @@ export class Login extends React.Component {
                     <View style={[ styles.row_underline, { marginBottom: 24, }]}>
                         <Icon name="lock-outline" style={styles.login_icon} />
                         <TextInput placeholder="Password"
-                            placeholderTextColor="#ADADAD"
+                            placeholderTextColor="#DA9484"
                             editable={!this.state.loading}
                             underlineColorAndroid='transparent'
                             style={[ styles.text_font, { flex: 1, paddingLeft: 12, } ]}
@@ -139,16 +140,16 @@ export class Login extends React.Component {
 const styles = StyleSheet.create({
     text_font:{
         fontSize: 16,
-        color: '#fff',
+        color: '#DA9484',
     },
     row_underline:{
         flexDirection: "row", 
         borderBottomWidth: 1, 
-        borderBottomColor: '#b6b6b6',
+        borderBottomColor: '#D26047',
     },
     login_icon:{
         alignSelf: 'center',
         fontSize: 20, 
-        color: '#ADADAD', 
+        color: '#D26047', 
     },
 });
