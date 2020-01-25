@@ -98,18 +98,18 @@ export default class Shop extends React.Component {
         } 
 
         return (                
-            <Content style={{ backgroundColor: '#010001', }}>
-                <Header style={{ backgroundColor: '#010001', }}>
+            <Content style={{ backgroundColor: '#DA9484', }}>
+                <Header style={{ backgroundColor: '#D26047', }}>
                     <ImageBackground 
                         resizeMode='cover' 
-                        source={require('../../images/bghead.png')} 
+                       // source={require('../../images/bghead.png')} 
                         style={{ width: '100%', justifyContent: "center", alignItems: "center" }} 
                     >
                         <Text style={[ styles.text_font, { fontSize: 18, }]}>ค้นหาร้านค้า</Text>
                     </ImageBackground>
                 </Header>
                 <View style={{ padding: 12, }}>
-                    <View style={[{ height: 48, backgroundColor: '#474648', flexDirection: 'row', borderRadius: 25, elevation: 3, }]}>
+                    <View style={[{ height: 48, backgroundColor: '#E4CDC8', flexDirection: 'row', borderRadius: 25, elevation: 3, }]}>
                         <TextInput style={[ styles.text_font, { flex: 1, paddingLeft: 18, }]}
                             placeholder="What are you looking for ?" 
                             placeholderTextColor="#979697"
