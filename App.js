@@ -57,7 +57,8 @@ const Navigation = createSwitchNavigator({
   Login: Login,
   Home: HomeNavigation,
 })
-
+console.ignoredYellowBox = ['Warning: Each', 'Warning: Failed'];
+console.disableYellowBox = true;
 const App = createAppContainer(Navigation);
 
 export default App;
